@@ -1,4 +1,4 @@
-
+import numpy
 
 
 def Cext_analytical(radius, wavelength, diel_in, diel_out):
