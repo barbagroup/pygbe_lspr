@@ -1,2 +1,5 @@
 # IPython Notebook
 .ipynb_checkpoints
+
+#txt files
+*.txt
