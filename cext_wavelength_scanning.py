@@ -8,13 +8,14 @@ def Cext_analytical(radius, wavelength, diel_in, diel_out):
     Arguments:
     ----------
     radius    : float, radius of the sphere in [nm].
-    wavelength: float, wavelength of the incident electric field in [nm].
-    diel_in   : complex, dielectric constant inside surface. 
-    diel_out  : complex, dielectric constant inside surface.
+    wavelength: float/array of floats, wavelength of the incident
+                electric field in [nm].
+    diel_in   : complex/array of complex, dielectric constant inside surface. 
+    diel_out  : complex/array of complex, dielectric constant inside surface.
 
     Returns:
     --------
-    Cext_an   : float, extinction cross section.
+    Cext_an   : float/array of floats, extinction cross section.
       
     '''
     wavenumber = 2*numpy.pi*numpy.sqrt(diel_out)/wavelength
