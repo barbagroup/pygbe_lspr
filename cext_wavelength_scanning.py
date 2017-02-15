@@ -2,17 +2,18 @@ import numpy
 import pygbe 
 from pygbe.main import main
 
-def Cext_wave_scan(wave_diel, field, example_folder_path):
+def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
 
     '''Computes the extinction cross section using PyGBe for different 
        wavelength and associated dielectric constants. 
 
     Arguments:
     ----------
-    wave_diel          : list, each element is a tuple (wavelength, field('E'))
-                         where field('E') is a list of the dielectric constant 
-                         of each region.       
-    field              : dictionary, config dictionary.
+    wavelength         : array/list, wavelengths we want to scan.   
+    diel               : list, each element contains the field('E') for the
+                         respective wavelength. i.e each element is a list 
+                         of the dielectric constant of each region.
+    field_dict         : dictionary, config dictionary.
     example_folder_path: str, path to the example folder relative to wherever
                          the interpreter was started. 
 
@@ -23,13 +24,16 @@ def Cext_wave_scan(wave_diel, field, example_folder_path):
     '''
 
     Cext_wave = []
+    wave_diel = list(zip(wavelength, diel))
+    
     for wave, E in wave_diel:
-        field['E'] = E  
-        results = main(['', example_folder_path], field=field,
+        field_dict['E'] = E  
+        results = main(['', example_folder_path], field=field_dict,
                   lspr=(-1,wave), return_results_dict=True)
-        Cext_wave.append(results['Cext'])
+        Cext_wave.append(results['Cext'][0])
+        
 
-    return Cext_wave
+    return wavelength, Cext_wave
 
 
 def Cext_analytical(radius, wavelength, diel_in, diel_out):
