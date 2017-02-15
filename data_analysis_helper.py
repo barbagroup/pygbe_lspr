@@ -2,47 +2,6 @@ import numpy
 from matplotlib import pyplot
 from scipy.interpolate import interp1d, splev, splrep
 
-def plot_refrac(lamb, n, k):    
-    """
-    Plots the refractive index vs wavelength.
-    Plots separately the real and imaginary part of the refractive index.
-    
-    Arguments:
-    ----------
-    lamb: array, wavelengths.
-    n   : array, real part of refractive index. 
-    k   : array, imaginary part of refractive index.
-    
-    Returns:
-    --------
-    Plots of refrac_index_real vs lambda, refrac_index_imaginary vs lambda. 
-    """
-    
-    pyplot.figure(figsize=(12,4))  
-
-    pyplot.subplot(121)
-    
-    pyplot.scatter(lamb,n, color='#2929a3') 
-    
-    pyplot.xlabel('Wavelength [nm]')
-    pyplot.ylabel('Refractive index')
-    pyplot.xlim(min(lamb)-5, max(lamb)+5)
-    pyplot.xticks(numpy.linspace(min(lamb), max(lamb), 10), rotation=25)
-    pyplot.title('Real')
-    pyplot.grid()
-    
-    
-    pyplot.subplot(122)
-    
-    pyplot.scatter(lamb,k, color='#ff5733') 
-    
-    pyplot.xlabel('Wavelength [nm]')
-    #pyplot.ylabel('Refractive index')
-    pyplot.xlim(min(lamb)-5, max(lamb)+5)
-    pyplot.xticks(numpy.linspace(min(lamb), max(lamb), 10), rotation=25)
-    pyplot.title('Imaginary')
-    pyplot.grid()
-
 
 def linear_interp(lamb, n, k):
     '''Returns the linear interpolation of the real and imaginary refractive index.
@@ -113,6 +72,46 @@ def spline_eval(x, real_tuple, imag_tuple):
     
     return real_spline, imag_spline
 
+def plot_refrac(lamb, n, k):    
+    """
+    Plots the refractive index vs wavelength.
+    Plots separately the real and imaginary part of the refractive index.
+    
+    Arguments:
+    ----------
+    lamb: array, wavelengths.
+    n   : array, real part of refractive index. 
+    k   : array, imaginary part of refractive index.
+    
+    Returns:
+    --------
+    Plots of refrac_index_real vs lambda, refrac_index_imaginary vs lambda. 
+    """
+    
+    pyplot.figure(figsize=(12,4))  
+
+    pyplot.subplot(121)
+    
+    pyplot.scatter(lamb,n, color='#2929a3') 
+    
+    pyplot.xlabel('Wavelength [nm]')
+    pyplot.ylabel('Refractive index')
+    pyplot.xlim(min(lamb)-5, max(lamb)+5)
+    pyplot.xticks(numpy.linspace(min(lamb), max(lamb), 10), rotation=25)
+    pyplot.title('Real')
+    pyplot.grid()
+    
+    
+    pyplot.subplot(122)
+    
+    pyplot.scatter(lamb,k, color='#ff5733') 
+    
+    pyplot.xlabel('Wavelength [nm]')
+    #pyplot.ylabel('Refractive index')
+    pyplot.xlim(min(lamb)-5, max(lamb)+5)
+    pyplot.xticks(numpy.linspace(min(lamb), max(lamb), 10), rotation=25)
+    pyplot.title('Imaginary')
+    pyplot.grid()
 
 def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline, imag_spline):
     '''Plots data, linear interpolation and spline of the real and imaginary refractive index
