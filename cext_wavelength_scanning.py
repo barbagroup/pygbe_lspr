@@ -2,6 +2,34 @@ import numpy
 import pygbe 
 from pygbe.main import main
 
+def create_diel_list(n_out, k_out, n_in, k_in):
+    '''Returns the dielectric constant list. Each element contains the
+       field('E') for the respective wavelength. i.e each element is a list 
+       of the dielectric constant of each region. 
+    
+    Arguments:
+    ----------
+    n_out: array, real part of refractive index in the outside region.
+    k_out: array, imaginary part of refractive index in the outside region.
+    n_in : array, real part of refractive index in the inside region.
+    k_in : array, imaginary part of refractive index in the inside region.
+
+    Returns:
+    --------
+    diel_list: list, dielectric constant list.
+    '''
+    
+    refrac_out = n_out + 1j * k_out
+    refrac_in  = n_in + 1j * k_in
+
+    diel_out = refrac_out * refrac_out 
+    diel_in  = refrac_in * refrac_in
+
+    diel_list = [list(eps) for eps in zip(diel_out, diel_in)]
+    
+    return diel_list
+
+
 def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
 
     '''Computes the extinction cross section using PyGBe for different 
@@ -19,8 +47,7 @@ def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
 
     Returns:
     --------  
-    Cext_wave          : list, list of cross extinction sections. 
-    
+    Cext_wave          : list, list of cross extinction sections.   
     '''
 
     Cext_wave = []
