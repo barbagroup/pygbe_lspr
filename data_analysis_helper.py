@@ -2,6 +2,25 @@ import numpy
 from matplotlib import pyplot
 from scipy.interpolate import interp1d, splev, splrep
 
+def nm_from_ev(electron_volts):
+    '''Returns wavelength in nanometers [nm] from energy given in electron
+       volts [eV].
+
+    Arguments:
+    ----------
+    electron_volts: float/array, energy in electron volts [eV]
+
+    Returns:
+    --------
+    lamb_nm = float/array, wavelength in nanometers [nm]
+    '''
+
+    h = 4.13566766225e-15 # Planck's contant in [eV.s]
+    c = 2.99792458e17 # light velocity in [nm/s]
+    
+    lamb_nm = h*c / electron_volts 
+
+    return lamb_nm
 
 def linear_interp(lamb, n, k):
     '''Returns the linear interpolation of the real and imaginary refractive index.
