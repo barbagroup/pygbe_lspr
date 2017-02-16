@@ -60,7 +60,7 @@ k_g = k_g[idx_min:idx_max]
 numpy.savetxt('data/lambda_refrac_water_silv_gold.txt', 
                list(zip(lambda_wsg, n_w, k_w, n_s, k_s, n_g, k_g)),
                fmt='%.8f %.8e %.8e %.8e %.8e %.8e %.8e',
-               header='lambda [nm], refrac_real_water, refrac_imag_water, refrac_real_silver, refrac_imag_silver, refrac_real_gold, refrac_imag_gold ')
+               header='lambda [nm], refrac_real_water, refrac_imag_water, refrac_real_silver, refrac_imag_silver, refrac_real_gold, refrac_imag_gold')
 
 #Creating dielectric list for silver
 diel_wat_s, diel_sil, diel_list_silv = create_diel_list(n_w, k_w, n_s, k_s)
