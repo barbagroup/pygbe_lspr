@@ -9,13 +9,15 @@ def create_diel_list(n_out, k_out, n_in, k_in):
     
     Arguments:
     ----------
-    n_out: array, real part of refractive index in the outside region.
-    k_out: array, imaginary part of refractive index in the outside region.
-    n_in : array, real part of refractive index in the inside region.
-    k_in : array, imaginary part of refractive index in the inside region.
+    n_out    : array, real part of refractive index in the outside region.
+    k_out    : array, imaginary part of refractive index in the outside region.
+    n_in     : array, real part of refractive index in the inside region.
+    k_in     : array, imaginary part of refractive index in the inside region.
 
     Returns:
     --------
+    diel_out : complex/array of complex, dielectric constant inside surface.
+    diel_in  : complex/array of complex, dielectric constant inside surface. 
     diel_list: list, dielectric constant list.
     '''
     
@@ -27,7 +29,7 @@ def create_diel_list(n_out, k_out, n_in, k_in):
 
     diel_list = [list(eps) for eps in zip(diel_out, diel_in)]
     
-    return diel_list
+    return diel_out, diel_in, diel_list
 
 
 def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
@@ -63,7 +65,7 @@ def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
     return wavelength, Cext_wave
 
 
-def Cext_analytical(radius, wavelength, diel_in, diel_out):
+def Cext_analytical(radius, wavelength, diel_out, diel_in):
     '''Calculates the analytical solution of the extinction cross section.
        This solution is valid when the nano particle involved is a sphere. 
     
@@ -72,8 +74,8 @@ def Cext_analytical(radius, wavelength, diel_in, diel_out):
     radius    : float, radius of the sphere in [nm].
     wavelength: float/array of floats, wavelength of the incident
                 electric field in [nm].
-    diel_in   : complex/array of complex, dielectric constant inside surface. 
     diel_out  : complex/array of complex, dielectric constant inside surface.
+    diel_in   : complex/array of complex, dielectric constant inside surface. 
 
     Returns:
     --------
