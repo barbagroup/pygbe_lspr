@@ -95,14 +95,14 @@ error_gold = abs(Cext_gold-Cext_an_gold)/Cext_an_gold
 #Save wavelength, Cext, Cext_analytical, error
 #Silver
 numpy.savetxt('data/lambda_Cext_Cext_an_error_silver.txt', 
-              list(zip(wave_s, Cext_silver, Cext_an_silver, error_silv),
+              list(zip(wave_s, Cext_silver, Cext_an_silver, error_silv)),
               fmt = '%.8f %.8f %.8f %.8f', 
-              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 2K elements)')) 
+              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 2K elements)') 
 
 #Gold
 numpy.savetxt('data/lambda_Cext_Cext_an_error_gold.txt', 
-              list(zip(wave_g, Cext_gold, Cext_an_gold, error_gold),
+              list(zip(wave_g, Cext_gold, Cext_an_gold, error_gold)),
               fmt = '%.8f %.8f %.8f %.8f', 
-              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 2K elements)')) 
+              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 2K elements)') 
 
 
