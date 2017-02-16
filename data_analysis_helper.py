@@ -2,6 +2,43 @@ import numpy
 from matplotlib import pyplot
 from scipy.interpolate import interp1d, splev, splrep
 
+def wave_filter_interp(lambda_eval, lambda_interp):
+    '''It removes the data points of a wavelength array, that are out of the
+       range where the resulting interpolation is valid.  
+
+    Arguments:
+    ----------
+    lambda_eval    : array, wavelength array that where we want to evaluate the
+                     resulting function of 
+    lambda_interp  : array, wavelength array of the interpolated data. 
+
+    Returns:
+    --------
+    lambda_eval_new: array, wavelength array ready for evaluation. 
+    idx_min        : int, index where the slicing of lambda_eval starts. 
+    idx_max        : int, index where the slicing of lambda_eval ends.
+
+    '''
+
+    lam_min = numpy.where(lambda_eval<min(lambda_interp))[0]
+
+    if len(lam_min)>0:
+        idx_min = max(lam_min) + 1
+    else:
+        idx_min = 0
+
+    lam_max = numpy.where(lambda_eval>max(lambda_interp))[0]
+
+    if len(lam_max)>0:
+        idx_max = min(lam_max)
+    else:
+        idx_max = None
+
+    lambda_eval_new = lambda_eval[idx_min:idx_max]
+
+    return lambda_eval_new, idx_min, idx_max
+
+
 def nm_from_ev(electron_volts):
     '''Returns wavelength in nanometers [nm] from energy given in electron
        volts [eV].
