@@ -1,11 +1,14 @@
 import numpy
 
-from data_analysis_helper import nm_from_ev, linear_interp, wave_filter_interp
-from cext_wavelength_scanning import create_diel_list, Cext_wave_scan, Cext_analytical
+from matplotlib import pyplot
+from scipy.interpolate import interp1d, splev, splrep
 
 import pygbe
 from pygbe.util.read_data import read_fields
 from pygbe.main import main
+
+from data_analysis_helper import nm_from_ev, linear_interp, wave_filter_interp
+from cext_wavelength_scanning import create_diel_list, Cext_wave_scan, Cext_analytical
 
 
 #Import silver data
@@ -41,8 +44,8 @@ water_real_linear , water_imag_linear = linear_interp(lambda_w, n_w, k_w)
 lambda_wsg, idx_min, idx_max = wave_filter_interp(lambda_s, lambda_w)
 
 #Calculate n and k for water. We evaluate the function obtain after interpolation.
-n_w = water_real_linear(lambda_ws)
-k_w = water_imag_linear(lambda_ws)
+n_w = water_real_linear(lambda_wsg)
+k_w = water_imag_linear(lambda_wsg)
 
 #Remove values of n and k from silver and gold that are out of range compared
 #to the ones for water.
