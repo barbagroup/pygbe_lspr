@@ -115,7 +115,7 @@ time_silver = toc_s - tic_s
 time_gold = toc_g - tic_g
 time_total = time_silver + time_gold
 
-with open('time_8K.txt', 'w') as f:
+with open('data/time_8K.txt', 'w') as f:
     print('time_silver: {} \ntime_gold: {} \ntime_total: {}'.format(time_silver,
           time_gold, time_total), file=f)
 
