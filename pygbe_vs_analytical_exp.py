@@ -1,4 +1,5 @@
 import numpy
+import time
 
 from matplotlib import pyplot
 from scipy.interpolate import interp1d, splev, splrep
@@ -82,11 +83,14 @@ wave_g, Cext_gold = Cext_wave_scan(lambda_wsg, diel_list_gold, field_dict,
 #Calculate Cext_analytical(lambda) for silver and gold, radius of sphere=10 nm
 r = 10.
 #Silver
+tic_s = time.time()
 Cext_an_silver = Cext_analytical(r, wave_s, diel_wat_s, diel_sil)
+toc_s = time.time()
 
 #Gold
+tic_g = time.time()
 Cext_an_gold = Cext_analytical(r, wave_g, diel_wat_g, diel_gold)
-
+toc_g = time.time()
 
 #Absolute errors
 error_silv = abs(Cext_silver-Cext_an_silver)/Cext_an_silver 
@@ -94,15 +98,22 @@ error_gold = abs(Cext_gold-Cext_an_gold)/Cext_an_gold
 
 #Save wavelength, Cext, Cext_analytical, error
 #Silver
-numpy.savetxt('data/lambda_Cext_Cext_an_error_silver.txt', 
+numpy.savetxt('data/lambda_Cext_Cext_an_error_silver_8K.txt', 
               list(zip(wave_s, Cext_silver, Cext_an_silver, error_silv)),
               fmt = '%.8f %.8f %.8f %.8f', 
-              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 2K elements)') 
+              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 8K elements)') 
 
 #Gold
-numpy.savetxt('data/lambda_Cext_Cext_an_error_gold.txt', 
+numpy.savetxt('data/lambda_Cext_Cext_an_error_gold_8K.txt', 
               list(zip(wave_g, Cext_gold, Cext_an_gold, error_gold)),
               fmt = '%.8f %.8f %.8f %.8f', 
-              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 2K elements)') 
+              header = 'lambda [nm], Cext, Cext_analytical, error - (Mesh of 8K elements)') 
 
+time_silver = toc_s - tic_s
+time_gold = toc_g - tic_g
+time_total = time_silver + time_gold
+
+with open('time_8K.txt', 'w') as f:
+    print('time_silver: {} \ntime_gold: {} \ntime_total: {}'.format(time_silver,
+          time_gold, time_total), file=f)
 
