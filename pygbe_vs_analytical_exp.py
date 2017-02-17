@@ -73,24 +73,26 @@ diel_wat_g, diel_gold, diel_list_gold = create_diel_list(n_w, k_w, n_g, k_g)
 field_dict = read_fields('sphere_complex.config')
 
 #Calculate Cext(lambda) for silver
+tic_s = time.time()
 wave_s, Cext_silver = Cext_wave_scan(lambda_wsg, diel_list_silv, field_dict,
                      '../pygbe_dev/pygbe/examples/lspr') 
+toc_s = time.time()
 
 #Calculate Cext(lambda) for gold
+tic_g = time.time()
 wave_g, Cext_gold = Cext_wave_scan(lambda_wsg, diel_list_gold, field_dict,
                      '../pygbe_dev/pygbe/examples/lspr')
+toc_g = time.time()
 
 #Calculate Cext_analytical(lambda) for silver and gold, radius of sphere=10 nm
 r = 10.
 #Silver
-tic_s = time.time()
 Cext_an_silver = Cext_analytical(r, wave_s, diel_wat_s, diel_sil)
-toc_s = time.time()
+
 
 #Gold
-tic_g = time.time()
 Cext_an_gold = Cext_analytical(r, wave_g, diel_wat_g, diel_gold)
-toc_g = time.time()
+
 
 #Absolute errors
 error_silv = abs(Cext_silver-Cext_an_silver)/Cext_an_silver 
