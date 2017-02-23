@@ -1,5 +1,5 @@
 import numpy 
-from matplotlib import pyplot
+from matplotlib import pyplot, rcParams
 from scipy.interpolate import interp1d, splev, splrep
 
 def wave_filter_interp(lambda_eval, lambda_interp):
@@ -220,4 +220,45 @@ def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline
     pyplot.xlabel('Wavelength [nm]')
     pyplot.legend(loc='best')
     pyplot.grid()
+
+def plot_silver_sph_convergence(N, error):
+    """
+    Plots grid convergence for silver sphere lspr problem.
+
+    Arguments:
+    ----------
+    N    : list, number of elements of meshes picked for convergence analysis. 
+    error: list, relative error compared to the analytical solution.
+    """
+
+    rcParams['font.family'] = 'serif'
+    rcParams['font.size'] = 16
+    rcParams['xtick.top'] = True
+    rcParams['ytick.right'] = True
+    rcParams['axes.linewidth'] = 2
+
+    asymp = N[-2]*error[-2]/N
+
+    pyplot.figure(figsize=(9,6))
+
+    pyplot.loglog(N, error, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10, label='')
+    pyplot.loglog(N, asymp, c='k', marker='None', ls=':', lw=2, label=None)
+
+    loc = (3*N[-2]+N[-1])/4
+
+    tex_loc = numpy.array((loc,N[-1]*error[-1]/loc))
+
+    pyplot.text(tex_loc[0], tex_loc[1],r'N$^{-1}$',fontsize=12,rotation=-35,rotation_mode='anchor')
+    pyplot.xlabel('N')
+    pyplot.ylabel('Relative error')
+    pyplot.tick_params(axis='both', length=10, width=1, which='major', direction='in')
+    pyplot.tick_params(axis='both', length=5, width=1, which='minor', direction='in')
+    pyplot.ylim(1e-3,1)
+    pyplot.xlim(1e2,1e5)
+    pyplot.grid(True, which="both")
+
+    #Uncomment if desired to save figure
+    #pyplot.savefig('Cext_convergence_silver.pdf', dpi=80, format='pdf')
+
+
     
