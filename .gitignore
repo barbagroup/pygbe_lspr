@@ -6,3 +6,7 @@
 
 #config files
 *.config
+
+#pdf files/images
+*.pdf
+
