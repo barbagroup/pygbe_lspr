@@ -24,3 +24,47 @@ diel_wat_75, diel_sil_75, diel_list_75 = create_diel_list(nw_75, kw_75, ns_75, k
 #Creating dielectric list for gold
 diel_wat_76, diel_gold_76, diel_list_76 = create_diel_list(nw_76, kw_76, ng_76, kg_76)
 
+#Creating dictionary field. We will modify the 'E' key in the for loop.
+field_dict_Ag = read_fields('sphereAg_complex.config')
+field_dict_Au = read_fields('sphereAu_complex.config')
+
+#Calculate Cext(lambda) for silver
+tic_s = time.time()
+wave_s, Cext_silver = Cext_wave_scan(lambda_75, diel_list_75, field_dict_Ag,
+                     '../pygbe_dev/pygbe/examples/lspr') 
+toc_s = time.time()
+
+#Calculate Cext(lambda) for gold
+tic_g = time.time()
+wave_g, Cext_gold = Cext_wave_scan(lambda_76, diel_list_76, field_dict_Au,
+                     '../pygbe_dev/pygbe/examples/lspr')
+toc_g = time.time()
+
+#Calculate Cext_analytical(lambda) for silver and gold, radius of sphere=10 nm
+r = 10.
+#Silver
+Cext_an_silver = Cext_analytical(r, wave_s, diel_wat_75, diel_sil_75)
+
+#Gold
+Cext_an_gold = Cext_analytical(r, wave_g, diel_wat_76, diel_gold_76)
+
+#Relative errors
+error_silv = abs(Cext_silver-Cext_an_silver)/Cext_an_silver 
+error_gold = abs(Cext_gold-Cext_an_gold)/Cext_an_gold
+
+#Save wavelength, Cext, Cext_analytical, error
+#Silver
+numpy.savetxt('data/lambda_Cext_Cext_an_error_silver_7.5.txt', 
+              list(zip(wave_s, Cext_silver, Cext_an_silver, error_silv)),
+              fmt = '%.8f %.8f %.8f %.8f', 
+              header = 'lambda [nm], Cext, Cext_analytical, error') 
+
+#Gold
+numpy.savetxt('data/lambda_Cext_Cext_an_error_gold_7.6.txt', 
+              list(zip(wave_g, Cext_gold, Cext_an_gold, error_gold)),
+              fmt = '%.8f %.8f %.8f %.8f', 
+              header = 'lambda [nm], Cext, Cext_analytical, error') 
+
+
+
+
