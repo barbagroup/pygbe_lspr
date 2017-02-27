@@ -65,6 +65,13 @@ numpy.savetxt('data/lambda_Cext_Cext_an_error_gold_7.6.txt',
               fmt = '%.8f %.8f %.8f %.8f', 
               header = 'lambda [nm], Cext, Cext_analytical, error') 
 
+time_silver = toc_s - tic_s
+time_gold = toc_g - tic_g
+time_total = time_silver + time_gold
+
+with open('data/time_7.5-7.6.txt', 'w') as f:
+    print('time_silver: {} \ntime_gold: {} \ntime_total: {}'.format(time_silver,
+          time_gold, time_total), file=f)
 
 
 
