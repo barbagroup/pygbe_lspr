@@ -59,7 +59,7 @@ def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
         field_dict['E'] = E  
         results = main(['', example_folder_path], field=field_dict,
                   lspr=(-1,wave), return_results_dict=True)
-        Cext_wave.append(results['Cext'][0])
+        Cext_wave.append(results['Cext_0'])
         
 
     return wavelength, Cext_wave
