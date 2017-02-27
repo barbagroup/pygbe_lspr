@@ -31,13 +31,13 @@ field_dict_Au = read_fields('sphereAu_complex.config')
 #Calculate Cext(lambda) for silver
 tic_s = time.time()
 wave_s, Cext_silver = Cext_wave_scan(lambda_75, diel_list_75, field_dict_Ag,
-                     '../pygbe_dev/pygbe/examples/lspr') 
+                     '../pygbe_dev/pygbe/examples/lspr_silver') 
 toc_s = time.time()
 
 #Calculate Cext(lambda) for gold
 tic_g = time.time()
 wave_g, Cext_gold = Cext_wave_scan(lambda_76, diel_list_76, field_dict_Au,
-                     '../pygbe_dev/pygbe/examples/lspr')
+                     '../pygbe_dev/pygbe/examples/lspr_gold')
 toc_g = time.time()
 
 #Calculate Cext_analytical(lambda) for silver and gold, radius of sphere=10 nm
