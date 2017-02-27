@@ -14,7 +14,13 @@ lambda_75, ns_75, ks_75, nw_75, kw_75 = numpy.loadtxt('data/lambda_n_k_silver-7.
                                                        unpack = True)
 
 #Import gold case
-#Import silver case
-lambda_76, ns_76, ks_76, nw_76, kw_76 = numpy.loadtxt('data/lambda_n_k_gold-7.6.txt',
+lambda_76, ng_76, kg_76, nw_76, kw_76 = numpy.loadtxt('data/lambda_n_k_gold-7.6.txt',
                                                        unpack = True)
+
+
+#Creating dielectric list for silver
+diel_wat_75, diel_sil_75, diel_list_75 = create_diel_list(nw_75, kw_75, ns_75, ks_75)
+
+#Creating dielectric list for gold
+diel_wat_76, diel_gold_76, diel_list_76 = create_diel_list(nw_76, kw_76, ng_76, kg_76)
 
