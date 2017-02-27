@@ -94,7 +94,7 @@ Cext_an_silver = Cext_analytical(r, wave_s, diel_wat_s, diel_sil)
 Cext_an_gold = Cext_analytical(r, wave_g, diel_wat_g, diel_gold)
 
 
-#Absolute errors
+#Relative errors
 error_silv = abs(Cext_silver-Cext_an_silver)/Cext_an_silver 
 error_gold = abs(Cext_gold-Cext_an_gold)/Cext_an_gold
 
