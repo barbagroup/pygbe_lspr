@@ -1,3 +1,9 @@
+"""
+To run this case you need to creat the corresponding problem folders with the
+appropriate meshes. Here we call them lspr_silver/ and lspr_gold/
+
+"""
+
 import numpy
 import time
 
