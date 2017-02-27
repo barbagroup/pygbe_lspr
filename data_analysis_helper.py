@@ -221,7 +221,7 @@ def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline
     pyplot.legend(loc='best')
     pyplot.grid()
 
-def plot_silver_sph_convergence(N, error):
+def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     """
     Plots grid convergence for silver sphere lspr problem.
 
@@ -237,28 +237,39 @@ def plot_silver_sph_convergence(N, error):
     rcParams['ytick.right'] = True
     rcParams['axes.linewidth'] = 2
 
-    asymp = N[-2]*error[-2]/N
+    asymp_Ag = N_Ag[-2]*error_Ag[-2]/N_Ag
+    asymp_Au = N_Au[-2]*error_Au[-2]/N_Au
 
     pyplot.figure(figsize=(9,6))
 
-    pyplot.loglog(N, error, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10, label='')
-    pyplot.loglog(N, asymp, c='k', marker='None', ls=':', lw=2, label=None)
+    pyplot.loglog(N_Ag, error_Ag, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10, label='Ag')
+    pyplot.loglog(N_Ag, asymp_Ag, c='k', marker='None', ls=':', lw=2, label=None)
 
-    loc = (3*N[-2]+N[-1])/4
+    pyplot.loglog(N_Au, error_Au, ls='',marker='s', c='k', mew=1.5, mfc='w', ms=10, label='Au')
+    pyplot.loglog(N_Au, asymp_Au, c='k', marker='None', ls=':', lw=2, label=None)
 
-    tex_loc = numpy.array((loc,N[-1]*error[-1]/loc))
+    loc_Ag = (3*N_Ag[-2]+N_Ag[-1])/4
+    loc_Au = (3*N_Au[-2]+N_Au[-1])/4
 
-    pyplot.text(tex_loc[0], tex_loc[1],r'N$^{-1}$',fontsize=12,rotation=-35,rotation_mode='anchor')
+    tex_loc_Ag = numpy.array((loc_Ag,N_Ag[-1]*error_Ag[-1]/loc_Ag))
+    tex_loc_Au = numpy.array((loc_Au,N_Au[-1]*error_Au[-1]/loc_Au))
+
+    pyplot.text(tex_loc_Ag[0], tex_loc_Ag[1],r'N$^{-1}$', fontsize=12,
+                rotation=-35,rotation_mode='anchor')
+    pyplot.text(tex_loc_Au[0], tex_loc_Au[1],r'N$^{-1}$',fontsize=12,
+                rotation=-35,rotation_mode='anchor')
+
     pyplot.xlabel('N')
     pyplot.ylabel('Relative error')
     pyplot.tick_params(axis='both', length=10, width=1, which='major', direction='in')
     pyplot.tick_params(axis='both', length=5, width=1, which='minor', direction='in')
-    pyplot.ylim(1e-3,1)
+    pyplot.ylim(1e-4,1)
     pyplot.xlim(1e2,1e5)
+    pyplot.legend(loc='best')
     pyplot.grid(True, which="both")
 
     #Uncomment if desired to save figure
-    #pyplot.savefig('Cext_convergence_silver.pdf', dpi=80, format='pdf')
+    pyplot.savefig('Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
 
 
     
