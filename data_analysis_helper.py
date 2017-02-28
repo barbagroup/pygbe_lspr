@@ -269,7 +269,7 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     pyplot.grid(True, which="both")
 
     #Uncomment if desired to save figure
-    pyplot.savefig('Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
+    #pyplot.savefig('Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
 
 
     
