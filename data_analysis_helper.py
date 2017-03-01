@@ -155,7 +155,7 @@ def plot_refrac(lamb, n, k):
     pyplot.xlim(min(lamb)-5, max(lamb)+5)
     pyplot.xticks(numpy.linspace(min(lamb), max(lamb), 10), rotation=25)
     pyplot.title('Real')
-    pyplot.grid()
+    pyplot.grid(linestyle=':')
     
     
     pyplot.subplot(122)
@@ -167,7 +167,7 @@ def plot_refrac(lamb, n, k):
     pyplot.xlim(min(lamb)-5, max(lamb)+5)
     pyplot.xticks(numpy.linspace(min(lamb), max(lamb), 10), rotation=25)
     pyplot.title('Imaginary')
-    pyplot.grid()
+    pyplot.grid(linestyle=':')
 
 def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline, imag_spline):
     '''Plots data, linear interpolation and spline of the real and imaginary refractive index
@@ -202,7 +202,7 @@ def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline
     pyplot.title('Real')
     pyplot.ylabel('Refractive index')
     pyplot.legend(loc='best')
-    pyplot.grid()
+    pyplot.grid(linestyle=':')
     
     #Imaginary refrac index
     pyplot.subplot(212)
@@ -219,7 +219,7 @@ def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline
     pyplot.ylabel('Refractive index')
     pyplot.xlabel('Wavelength [nm]')
     pyplot.legend(loc='best')
-    pyplot.grid()
+    pyplot.grid(linestyle=':')
 
 def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     """
