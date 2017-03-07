@@ -254,9 +254,9 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     tex_loc_Ag = numpy.array((loc_Ag,N_Ag[-1]*error_Ag[-1]/loc_Ag))
     tex_loc_Au = numpy.array((loc_Au,N_Au[-1]*error_Au[-1]/loc_Au))
 
-    pyplot.text(tex_loc_Ag[0], tex_loc_Ag[1],r'N$^{-1}$', fontsize=12,
+    pyplot.text(tex_loc_Ag[0], tex_loc_Ag[1],'N$^{-1}$', fontsize=12,
                 rotation=-35,rotation_mode='anchor')
-    pyplot.text(tex_loc_Au[0], tex_loc_Au[1],r'N$^{-1}$',fontsize=12,
+    pyplot.text(tex_loc_Au[0], tex_loc_Au[1],'N$^{-1}$',fontsize=12,
                 rotation=-35,rotation_mode='anchor')
 
     pyplot.xlabel('N')
