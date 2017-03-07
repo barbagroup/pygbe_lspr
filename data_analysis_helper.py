@@ -223,7 +223,7 @@ def plot_interpolation(lamb, n, k, lamb_x, real_linear, imag_linear, real_spline
 
 def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     """
-    Plots grid convergence for silver sphere lspr problem.
+    Plots grid convergence for silver and gold sphere lspr problems.
 
     Arguments:
     ----------
@@ -271,5 +271,46 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     #Uncomment if desired to save figure
     #pyplot.savefig('Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
 
+def plot_sph_multiple_complex_convergence(avg_density, error):
+    """
+    Plots grid convergence for multiple spheres lspr problem.
 
+    Arguments:
+    ----------
+    avg_density: list, avg elements/nm^2  of meshes picked for convergence analysis. 
+    error      : list, relative error compared to the analytical solution.
+    """
+
+    rcParams['font.family'] = 'serif'
+    rcParams['font.size'] = 16
+    rcParams['xtick.top'] = True
+    rcParams['ytick.right'] = True
+    rcParams['axes.linewidth'] = 2
+
+    asymp = avg_density[-2]*error[-2]/avg_density
+
+    pyplot.figure(figsize=(9,6))
+
+    pyplot.loglog(avg_density, error, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10)
+    pyplot.loglog(avg_density, asymp, c='k', marker='None', ls=':', lw=2)
+
+    
+    loc = (3*avg_density[-2]+avg_density[-1])/4
+
+    tex_loc = numpy.array((loc,avg_density[-1]*error[-1]/loc))
+
+    pyplot.text(tex_loc[0], tex_loc[1],'avg_den$^{-1}$', fontsize=12,
+                rotation=-35,rotation_mode='anchor')
+    
+
+    pyplot.xlabel('Average elements/$nm^2$')
+    pyplot.ylabel('Relative error')
+    pyplot.tick_params(axis='both', length=10, width=1, which='major', direction='in')
+    pyplot.tick_params(axis='both', length=5, width=1, which='minor', direction='in')
+    pyplot.ylim(1e-3,1)
+    pyplot.xlim(1e-1,1e2)
+    pyplot.grid(True, which="both")
+
+    #Uncomment if desired to save figure
+    #pyplot.savefig('Cext_convergence_mult_sph.pdf', dpi=80, format='pdf')
     
