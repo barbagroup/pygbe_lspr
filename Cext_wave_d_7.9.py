@@ -57,7 +57,7 @@ for path in distance_path_folders:
                      '../pygbe_dev/pygbe/examples/'+path)
     toc=time.time()
 
-    numpy.savetxt('data/'+path+'.txt', 
+    numpy.savetxt('data/wave_cext_d/'+path+'.txt', 
               list(zip(wave, Cext)),
               fmt = '%.3f %.8f', 
               header = 'lambda [nm], Cext'+path)
@@ -66,6 +66,6 @@ for path in distance_path_folders:
     total_run_time += run_time
 
 
-    with open('data/time_wave_Cext_d.txt', 'w') as f:
+    with open('data/wave_cext_d/time_wave_Cext_d.txt', 'w') as f:
         print('run_time for {}: {}. Acumulated: {} \n '.format(path,run_time,
               total_run_time), file=f)
