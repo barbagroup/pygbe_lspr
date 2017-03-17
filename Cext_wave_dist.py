@@ -26,8 +26,8 @@ try:
     all(l_w == l_s) & all(l_s == l_p)
     wavelength = l_w
 except:
-    print('The wavelength ranges are not equal, check data generation')
-    raise SystemExit
+    raise ValueError('The wavelength ranges are not equal, check data generation')
+    
 
 #Complex dielectric assembly
 e_w = er_w + 1j*ei_w #water
