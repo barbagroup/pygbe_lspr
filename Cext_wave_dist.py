@@ -27,7 +27,7 @@ try:
     wavelength = l_w
 except:
     print('The wavelength ranges are not equal, check data generation')
-    break
+    raise SystemExit
 
 #Complex dielectric assembly
 e_w = er_w + 1j*ei_w #water
