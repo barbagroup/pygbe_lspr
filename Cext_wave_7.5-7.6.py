@@ -31,8 +31,8 @@ diel_wat_75, diel_sil_75, diel_list_75 = create_diel_list(nw_75, kw_75, ns_75, k
 diel_wat_76, diel_gold_76, diel_list_76 = create_diel_list(nw_76, kw_76, ng_76, kg_76)
 
 #Creating dictionary field. We will modify the 'E' key in the for loop.
-field_dict_Ag = read_fields('sphereAg_complex.config')
-field_dict_Au = read_fields('sphereAu_complex.config')
+field_dict_Ag = read_fields('../pygbe_dev/pygbe/examples/lspr_silver/sphereAg_complex.config')
+field_dict_Au = read_fields('../pygbe_dev/pygbe/examples/lspr_gold/sphereAu_complex.config')
 
 #Calculate Cext(lambda) for silver
 tic_s = time.time()
