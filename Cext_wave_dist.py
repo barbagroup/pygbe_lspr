@@ -78,6 +78,6 @@ for path in distance_path_folders:
               header = 'lambda [nm], Cext'+path)
 toc_d = time.time()
 
-with open('data/wave_cext_d/time_wave_Cext_d_r4.txt', 'w') as f:
+with open('data/wave_cext_d/time_wave_Cext_d.txt', 'w') as f:
         print('total run time: {}'.format((toc_single-tic_single)+(toc_d-tic_d)),
                                     file=f)
