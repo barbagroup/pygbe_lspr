@@ -230,6 +230,7 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     N    : list, number of elements of meshes picked for convergence analysis. 
     error: list, relative error compared to the analytical solution.
     """
+    pyplot.figure(figsize=(8,5))
 
     rcParams['font.family'] = 'serif'
     rcParams['font.size'] = 16
@@ -240,7 +241,6 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     asymp_Ag = N_Ag[-2]*error_Ag[-2]/N_Ag
     asymp_Au = N_Au[-2]*error_Au[-2]/N_Au
 
-    pyplot.figure(figsize=(9,6))
 
     pyplot.loglog(N_Ag, error_Ag, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10, label='Ag')
     pyplot.loglog(N_Ag, asymp_Ag, c='k', marker='None', ls=':', lw=2, label=None)
