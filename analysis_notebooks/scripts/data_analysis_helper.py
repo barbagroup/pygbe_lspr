@@ -289,7 +289,7 @@ def plot_sph_multiple_complex_convergence(avg_density, error):
 
     asymp = avg_density[-2]*error[-2]/avg_density
 
-    pyplot.figure(figsize=(9,6))
+    pyplot.figure(figsize=(8,5))
 
     pyplot.loglog(avg_density, error, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10)
     pyplot.loglog(avg_density, asymp, c='k', marker='None', ls=':', lw=2)
