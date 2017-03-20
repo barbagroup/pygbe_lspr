@@ -1,6 +1,6 @@
 import numpy
 import sys
-from data_analysis_helper import linear_interp
+from scripts.data_analysis_helper import linear_interp
 from argparse import ArgumentParser
 
 def read_inputs(args):

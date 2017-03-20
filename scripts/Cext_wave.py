@@ -12,7 +12,7 @@ import pygbe
 from pygbe.util.read_data import read_fields
 from pygbe.main import main
 
-from cext_wavelength_scanning import create_diel_list, Cext_wave_scan, Cext_analytical
+from scripts.cext_wavelength_scanning import create_diel_list, Cext_wave_scan, Cext_analytical
 
 
 #Import silver case

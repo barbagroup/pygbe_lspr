@@ -11,7 +11,7 @@ import pygbe
 from pygbe.util.read_data import read_fields
 from pygbe.main import main
 
-from cext_wavelength_scanning import Cext_wave_scan
+from scripts.cext_wavelength_scanning import Cext_wave_scan
 
 #Importing data
 l_w, er_w, ei_w = numpy.loadtxt('../data/wave_cext_d/wave_water_diel.txt',
