@@ -269,7 +269,7 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     pyplot.grid(True, which="both")
 
     #Uncomment if desired to save figure
-    #pyplot.savefig('Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
+    #pyplot.savefig('figures/Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
 
 def plot_sph_multiple_complex_convergence(avg_density, error):
     """
@@ -312,7 +312,7 @@ def plot_sph_multiple_complex_convergence(avg_density, error):
     pyplot.grid(True, which="both")
 
     #Uncomment if desired to save figure
-    #pyplot.savefig('Cext_convergence_mult_sph.pdf', dpi=80, format='pdf')
+    #pyplot.savefig('figures/Cext_convergence_mult_sph.pdf', dpi=80, format='pdf')
     
 def plot_cext_wave_distance(wavelength, cext, linestyles, colors, labels):
     '''Plots the cross extinction section as a function of wavelength for
@@ -362,4 +362,4 @@ def plot_cext_wave_distance(wavelength, cext, linestyles, colors, labels):
     pyplot.legend(loc='best')
 
     #Uncomment if desired to save figure
-    #pyplot.savefig('Cext_wave_distance.pdf', dpi=80, format='pdf')
+    #pyplot.savefig('figures/Cext_wave_distance.pdf', dpi=80, format='pdf')
