@@ -271,6 +271,33 @@ def plot_sph_complex_convergence(N_Ag, N_Au, error_Ag, error_Au):
     #Uncomment if desired to save figure
     #pyplot.savefig('figures/Cext_convergence_sph_Ag_Au.pdf', dpi=80, format='pdf')
 
+def plot_cext_wave(lamb, cext, cext_an, ylim_s, ylim_e, xpoints, title=None):
+    rcParams['font.family'] = 'serif'
+    rcParams['font.size'] = 14
+    rcParams['xtick.top'] = True
+    rcParams['ytick.right'] = True
+    rcParams['axes.linewidth'] = 2
+    
+    pyplot.figure(figsize=(9,6))
+
+    pyplot.plot(lamb, cext, ls='', marker='o', color='0.4', mew=1.5, mfc='w', ms=7, label='PyGBe')
+    pyplot.plot(lamb, cext_an, ls='--', marker='None',  c='k', lw=1.5, label='Analytical')
+
+
+    pyplot.xlabel('Wavelength [nm]')
+    pyplot.ylabel('Cross extinction section [$nm^2$]')
+    pyplot.xlim(min(lamb), max(lamb))
+    pyplot.ylim(ylim_s, ylim_e)
+
+    pyplot.xticks(numpy.linspace(min(lamb), max(lamb), xpoints), rotation=25)
+    pyplot.tick_params(axis='both', length=8, width=1, direction='in')
+    pyplot.title(title)
+    pyplot.legend(loc='best')
+    pyplot.grid(linestyle=':')
+
+    #Uncomment if desired to save figure
+    #pyplot.savefig('cext_wave_'+title, dpi=80, format='pdf');
+
 def plot_sph_multiple_complex_convergence(avg_density, error):
     """
     Plots grid convergence for multiple spheres lspr problem.
@@ -363,3 +390,4 @@ def plot_cext_wave_distance(wavelength, cext, linestyles, colors, labels):
 
     #Uncomment if desired to save figure
     #pyplot.savefig('figures/Cext_wave_distance.pdf', dpi=80, format='pdf')
+
