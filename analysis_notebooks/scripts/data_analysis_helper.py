@@ -314,3 +314,52 @@ def plot_sph_multiple_complex_convergence(avg_density, error):
     #Uncomment if desired to save figure
     #pyplot.savefig('Cext_convergence_mult_sph.pdf', dpi=80, format='pdf')
     
+def plot_cext_wave_distance(wavelength, cext, linestyles, colors, labels):
+    '''Plots the cross extinction section as a function of wavelength for
+    different values of distance at which the proteins are located.
+
+  	Arguments:
+    ----------
+    wavelength: list of wavelength arrays for each distance case.
+    cext      : list of cross extinction section arrays for each distance case.
+    linestyles: list of linstyles we desire to use for each distance case.
+    colors    : list of colors we desire to use for each distance case.
+    labels    : list of labels we desire to use for each distance case.
+	'''
+    rcParams['font.family'] = 'serif'
+    rcParams['font.size'] = 16
+    rcParams['xtick.top'] = True
+    rcParams['ytick.right'] = True
+    rcParams['axes.linewidth'] = 2
+
+    fig=pyplot.figure(figsize=(9,6))
+    ax = fig.add_subplot(1,1,1)
+    
+    major_xticks = numpy.linspace(min(wavelength[0]), max(wavelength[0]), 11)
+    minor_xticks = numpy.linspace(min(wavelength[0]), max(wavelength[0]), 41)
+    major_yticks = numpy.linspace(0, 8000, 9)
+    minor_yticks = numpy.linspace(0, 8000, 33)
+
+    ax.set_xticks(major_xticks)                                                       
+    ax.set_xticks(minor_xticks, minor=True)
+    ax.set_yticks(major_yticks)                                                       
+    ax.set_yticks(minor_yticks, minor=True)
+
+    pyplot.xticks(rotation=25)
+    pyplot.tick_params(axis='both', length=5, width=1, which='major', direction='in')
+    pyplot.tick_params(axis='both', length=2.5, width=1, which='minor', direction='in')
+
+    pyplot.xlim(380,400)
+    pyplot.ylim(0,8000)
+    pyplot.grid(ls=':', which='minor', alpha=0.4)
+    pyplot.grid(ls=':', which='major', alpha=0.8)
+    pyplot.title('Silver sphere with BSA Proteins')
+    
+    for i in range(len(wavelength)):
+        pyplot.plot(wavelength[i], cext[i], linestyle=linestyles[i], 
+                   color=colors[i], linewidth=2, label=labels[i])
+    
+    pyplot.legend(loc='best')
+
+    #Uncomment if desired to save figure
+    #pyplot.savefig('Cext_wave_distance.pdf', dpi=80, format='pdf')
