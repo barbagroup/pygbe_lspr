@@ -4,9 +4,6 @@
 #Ignore .pyc
 *.pyc
 
-#config files
-*.config
-
 #pdf files/images
-*.pdf
+figures/
 
