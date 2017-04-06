@@ -4,6 +4,6 @@
 #Ignore .pyc
 *.pyc
 
-#pdf files/images
-figures/
+#pdf files/images in analysis notebooks 
+analysis_notebooks/figures/
 
