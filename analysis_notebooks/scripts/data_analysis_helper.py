@@ -296,7 +296,7 @@ def plot_cext_wave(lamb, cext, cext_an, ylim_s, ylim_e, xpoints, title=None):
     pyplot.grid(linestyle=':')
 
     #Uncomment if desired to save figure
-    #pyplot.savefig('cext_wave_'+title, dpi=80, format='pdf');
+    #pyplot.savefig('figures/cext_wave_'+title+'.pdf', dpi=80, format='pdf');
 
 def plot_sph_multiple_complex_convergence(avg_density, error):
     """
