@@ -376,11 +376,13 @@ def plot_cext_wave_distance(wavelength, cext, linestyles, colors, labels):
     pyplot.tick_params(axis='both', length=5, width=1, which='major', direction='in')
     pyplot.tick_params(axis='both', length=2.5, width=1, which='minor', direction='in')
 
+    pyplot.xlabel('Wavelength [nm]')
+    pyplot.ylabel('Cross extinction section [$nm^2$]')
     pyplot.xlim(380,400)
     pyplot.ylim(0,8000)
     pyplot.grid(ls=':', which='minor', alpha=0.4)
     pyplot.grid(ls=':', which='major', alpha=0.8)
-    pyplot.title('Silver sphere with BSA Proteins')
+    #pyplot.title('Silver sphere with BSA Proteins')
     
     for i in range(len(wavelength)):
         pyplot.plot(wavelength[i], cext[i], linestyle=linestyles[i], 
