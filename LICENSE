@@ -1,7 +1,10 @@
-BSD 3-Clause License
-
-Copyright (c) 2017, Natalia Clementi
+Copyright (c) 2017, Barba Group: Natalia Clementi, Christopher Cooper, Gilbert Forsyth, Lorena Barba. 
 All rights reserved.
+
+Software:
+---------
+
+BSD 3-Clause License
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -27,3 +30,37 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Other content:
+--------------
+
+Made available under the Creative
+Commons Attribution license. You are free:
+
+* to Share---to copy, distribute and transmit the work
+* to Remix---to adapt the work
+
+Under the following conditions:
+
+* Attribution---You must attribute the work using "Copyright (c)
+  Barbagroup" (but not in any way that suggests that we
+  endorse you or your use of the work).  Where practical, you must
+  also include a hyperlink to https://github.com/numerical-mooc/numerical-mooc.
+
+With the understanding that:
+
+* Waiver---Any of the above conditions can be waived if you get
+  permission from the copyright holder.
+* Other Rights---In no way are any of the following rights
+  affected by the license:
+    * Your fair dealing or fair use rights;
+    * The author's moral rights;
+    * Rights other persons may have either in the work itself or in
+      how the work is used, such as publicity or privacy rights.  *
+* Notice---For any reuse or distribution, you must make clear to
+  others the license terms of this work. The best way to do this is
+  with a link to http://creativecommons.org/licenses/by/3.0/.
+
+For the full legal text of this license, please see:
+  http://creativecommons.org/licenses/by/3.0/legalcode
+
