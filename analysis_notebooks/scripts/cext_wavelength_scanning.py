@@ -1,6 +1,6 @@
 import numpy
 import pygbe 
-from pygbe.main import main
+from pygbe.lspr import main
 
 def create_diel_list(n_out, k_out, n_in, k_in):
     '''Returns the dielectric constant list. Each element contains the
