@@ -78,8 +78,8 @@ def main(argv=sys.argv):
 
     numpy.savetxt(output_name, 
                    list(zip(wavelength, diel_real, diel_imag)),
-                   fmt='%.3f %.18e %.18e',
-                   header='lambda [nm], diel_real, diel_imag')       
+                   fmt='%.1f %.5e %.5e',
+                   header='lambda [ang], diel_real, diel_imag')       
 
     return wavelength, diel 
 
