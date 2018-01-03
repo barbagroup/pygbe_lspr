@@ -42,7 +42,7 @@ field_dict_single = read_fields('../../../pygbe/examples/BSA_sensor_d=infty/sph_
 tic_single = time.time() 
 
 wave_single, Cext_single = Cext_wave_scan(wavelength, E_field_single, field_dict_single,
-                     '../../../pygbe_dev/pygbe/examples/BSA_sensor_d=infty')
+                     '../../../pygbe/examples/BSA_sensor_d=infty')
 toc_single = time.time()
 
 numpy.savetxt('../../data/wave_cext_d_prot_sensor/wave_cext_d_infty.txt', 
