@@ -1,7 +1,7 @@
 """
 To run this case you need to creat the corresponding problem folders with the
-appropriate meshes. Here we call them multiple_sphere_d=1, multiple_sphere_d=2,
-multiple_sphere_d=4
+appropriate meshes. Here we call them BSA_sensor_d=1, BSA_sensor_d=2,
+BSA_sensor_d=4 and for the case of no protein BSA_sensor_d=infty. 
 """
 
 import numpy
@@ -9,7 +9,7 @@ import time
 
 import pygbe
 from pygbe.util.read_data import read_fields
-from pygbe.main import main
+from pygbe.lspr import main
 
 from cext_wavelength_scanning import Cext_wave_scan
 
@@ -37,7 +37,7 @@ e_p = er_p + 1j*ei_p #protein
 #Building E field for single sphere dictionary
 E_field_single = [list(eps) for eps in zip(e_w, e_s)]
 
-field_dict_single = read_fields('../../../pygbe_dev/pygbe/examples/BSA_sensor_d=infty/sph_sensor.config')
+field_dict_single = read_fields('../../../pygbe/examples/BSA_sensor_d=infty/sph_sensor.config')
 
 tic_single = time.time() 
 
@@ -62,10 +62,10 @@ distance_path_folders = ['BSA_sensor_d=1',
 tic_d = time.time()
 for path in distance_path_folders:
 
-    field_dict = read_fields('../../../pygbe_dev/pygbe/examples/'
+    field_dict = read_fields('../../../pygbe/examples/'
                             +path+'/sphere_bsa.config')
     wave, Cext = Cext_wave_scan(wavelength, E_field, field_dict,
-                     '../../../pygbe_dev/pygbe/examples/'+path)
+                     '../../../pygbe/examples/'+path)
     toc=time.time()
 
     numpy.savetxt('../../data/wave_cext_d_prot_sensor/'+path+'.txt', 
