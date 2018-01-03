@@ -65,8 +65,8 @@ def main(argv=sys.argv):
     
     Arguments passed:
     -----------------
-    lamb_start: float, start point for wavelength range to generate dielectric. 
-    lamb_end  : float, end point for wavelength range to generate dielectric.
+    lamb_start: float, start point for wavelength [nm] range to generate dielectric. 
+    lamb_end  : float, end point for wavelength [nm] range to generate dielectric.
     num_points: int, number of points we want in the range.
 
     Returns:
@@ -110,10 +110,10 @@ def main(argv=sys.argv):
     
     epsilon_real = epsilon.real
     epsilon_imag = epsilon.imag
-
+    #if desired output of wavelength in Ang, multiply wavelength by 10 in following line
     numpy.savetxt('wave_prot_diel.txt', 
-                   list(zip(wavelength, epsilon_real, epsilon_imag)),
-                   fmt='%.3f %.18e %.18e',
+                   list(zip(wavelength*10, epsilon_real, epsilon_imag)),
+                   fmt='%.1f %.5e %.5e',
                    header='lambda [nm], diel_prot_real, diel_prot_imag')       
 
     return wavelength, epsilon
