@@ -49,7 +49,7 @@ toc_single = time.time()
 numpy.savetxt('../../data/wave_cext_d_prot_sensor/wave_cext_d_infty.txt', 
               list(zip(wave_single, Cext_single)),
               fmt = '%.1f %.8f', 
-              header = 'lambda [nm], Cext, d=infty')
+              header = 'lambda [Ang], Cext, d=infty')
 
 
 #Building E field for dictionary (protein)
@@ -75,7 +75,7 @@ for path in distance_path_folders:
     numpy.savetxt('../../data/wave_cext_d_prot_sensor/'+path+'.txt', 
               list(zip(wave, Cext)),
               fmt = '%.1f %.8f', 
-              header = 'lambda [nm], Cext'+path)
+              header = 'lambda [Ang], Cext'+path)
 toc_d = time.time()
 
 with open('../../data/wave_cext_d_prot_sensor/time_wave_Cext_d.txt', 'w') as f:
