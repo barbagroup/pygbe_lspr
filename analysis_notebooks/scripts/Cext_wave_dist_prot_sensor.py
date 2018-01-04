@@ -6,6 +6,7 @@ BSA_sensor_d=4 and for the case of no protein BSA_sensor_d=infty.
 
 import numpy
 import time
+import os
 
 import pygbe
 from pygbe.util.read_data import read_fields
@@ -33,7 +34,7 @@ except:
 e_w = er_w + 1j*ei_w #water
 e_s = er_s + 1j*ei_s #silver
 e_p = er_p + 1j*ei_p #protein
-'''
+
 #Building E field for single sphere dictionary
 E_field_single = [list(eps) for eps in zip(e_w, e_s)]
 
@@ -49,7 +50,7 @@ numpy.savetxt('../../data/wave_cext_d_prot_sensor/wave_cext_d_infty.txt',
               list(zip(wave_single, Cext_single)),
               fmt = '%.1f %.8f', 
               header = 'lambda [nm], Cext, d=infty')
-'''
+
 
 #Building E field for dictionary (protein)
 E_field = [list(eps) for eps in zip(e_w, e_s, e_p)]
@@ -60,9 +61,9 @@ distance_path_folders = ['BSA_sensor_d=1',
 						 'BSA_sensor_d=4']
 
 tic_d = time.time()
-for folder_name in distance_path_folders:
+for path in distance_path_folders:
 
-    folder_path = '../../../pygbe/examples/' + folder_name
+    folder_path = '../../../pygbe/examples/' + path
     full_path = os.path.abspath(folder_path)+'/'
     os.environ['PYGBE_PROBLEM_FOLDER'] = full_path
     
