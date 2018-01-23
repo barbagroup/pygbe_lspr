@@ -41,8 +41,8 @@ E_field_single = [list(eps) for eps in zip(e_w, e_s)]
 field_dict_single = read_fields('../../../pygbe/examples/BSA_sensor_d=infty/sph_sensor.config')
 
 tic_single = time.time() 
-
-wave_single, Cext_single = Cext_wave_scan(wavelength, E_field_single, field_dict_single,
+elec_field = -1
+wave_single, Cext_single = Cext_wave_scan(elec_field, wavelength, E_field_single, field_dict_single,
                      '../../../pygbe/examples/BSA_sensor_d=infty')
 toc_single = time.time()
 
@@ -61,6 +61,7 @@ distance_path_folders = ['BSA_sensor_d=1',
 						 'BSA_sensor_d=4']
 
 tic_d = time.time()
+elec_field = -1
 for path in distance_path_folders:
 
     folder_path = '../../../pygbe/examples/' + path
@@ -68,7 +69,7 @@ for path in distance_path_folders:
     os.environ['PYGBE_PROBLEM_FOLDER'] = full_path
     
     field_dict = read_fields(folder_path+'/sphere_bsa.config')
-    wave, Cext = Cext_wave_scan(wavelength, E_field, field_dict,
+    wave, Cext = Cext_wave_scan(elec_field, wavelength, E_field, field_dict,
                      '../../../pygbe/examples/'+path)
     toc=time.time()
 

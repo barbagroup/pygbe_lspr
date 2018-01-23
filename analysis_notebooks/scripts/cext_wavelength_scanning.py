@@ -32,7 +32,7 @@ def create_diel_list(n_out, k_out, n_in, k_in):
     return diel_out, diel_in, diel_list
 
 
-def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
+def Cext_wave_scan(elec_field, wavelength, diel, field_dict, example_folder_path):
 
     '''Computes the extinction cross section using PyGBe for different 
        wavelength and associated dielectric constants. 
@@ -59,7 +59,7 @@ def Cext_wave_scan(wavelength, diel, field_dict, example_folder_path):
         field_dict['E'] = E  
         results = main(['', example_folder_path], return_results_dict=True,
                        field=field_dict,
-                       lspr_values=(-1,wave))
+                       lspr_values=(elec_field, wave))
         Cext_wave.append(results['Cext_0'])
         
 
