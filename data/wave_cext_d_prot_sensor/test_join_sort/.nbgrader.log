@@ -1,0 +1,375 @@
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=c8bd46716e163d8158e79c18af3f75c56dd47ad7c1995cf7
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=c8bd46716e163d8158e79c18af3f75c56dd47ad7c1995cf7
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180105100933 (127.0.0.1) 8.82ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180105100933 (127.0.0.1) 3.26ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Creating new notebook in 
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180105100933 (127.0.0.1) 1.77ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180105100933 (127.0.0.1) 1.62ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[NotebookApp | INFO] Kernel started: 28343110-8b46-49a8-9071-6d1614f0a6d8
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180105100933 (127.0.0.1) 2.48ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 28343110-8b46-49a8-9071-6d1614f0a6d8
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel restarted: 28343110-8b46-49a8-9071-6d1614f0a6d8
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 28343110-8b46-49a8-9071-6d1614f0a6d8
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 28343110-8b46-49a8-9071-6d1614f0a6d8
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=66904c8167860a64ebb3ce7e7eed33c577827c4193670887
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=66904c8167860a64ebb3ce7e7eed33c577827c4193670887
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180108101226 (127.0.0.1) 10.04ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180108101226 (127.0.0.1) 3.32ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180108101226 (127.0.0.1) 2.31ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: 7b5a2bc1-153e-47f6-9d61-6ca97438185f
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180108101226 (127.0.0.1) 4.18ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 7b5a2bc1-153e-47f6-9d61-6ca97438185f
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 7b5a2bc1-153e-47f6-9d61-6ca97438185f
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=3522586d0e4b9f97c152df6d47b87b5a73abcbb6e4afe510
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=3522586d0e4b9f97c152df6d47b87b5a73abcbb6e4afe510
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180112141533 (127.0.0.1) 9.14ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180112141533 (127.0.0.1) 3.95ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180112141533 (127.0.0.1) 2.39ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: 8f293528-49c3-40a8-836d-02e823849c34
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180112141533 (127.0.0.1) 1.89ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 8f293528-49c3-40a8-836d-02e823849c34
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 8f293528-49c3-40a8-836d-02e823849c34
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8889/?token=30dee75e4af6ddadec41608b3c61d099b03a45886407577b
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=30dee75e4af6ddadec41608b3c61d099b03a45886407577b
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180125154946 (127.0.0.1) 8.74ms referer=http://localhost:8889/tree
+[NotebookApp | INFO] Kernel started: 4135b004-7240-4d1a-b9ef-f3a3e416a09c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 4135b004-7240-4d1a-b9ef-f3a3e416a09c
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180125154946 (127.0.0.1) 2.16ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180125154946 (127.0.0.1) 6.62ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel restarted: 4135b004-7240-4d1a-b9ef-f3a3e416a09c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 4135b004-7240-4d1a-b9ef-f3a3e416a09c
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 4135b004-7240-4d1a-b9ef-f3a3e416a09c
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=d2da174d06db4b375083d67167f64c56173e3fb910560852
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=d2da174d06db4b375083d67167f64c56173e3fb910560852
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180126171429 (127.0.0.1) 14.02ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180126171429 (127.0.0.1) 2.31ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180126171429 (127.0.0.1) 3.18ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: f9a2dd00-494d-4b2e-9e55-4ca47947585d
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180126171429 (127.0.0.1) 2.48ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel f9a2dd00-494d-4b2e-9e55-4ca47947585d
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: f9a2dd00-494d-4b2e-9e55-4ca47947585d
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8889/?token=a70c3021a9b0bb6f16df0d5cc546b609d76c2e880d6afed6
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=a70c3021a9b0bb6f16df0d5cc546b609d76c2e880d6afed6
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180126172622 (127.0.0.1) 11.41ms referer=http://localhost:8889/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180126172622 (127.0.0.1) 4.58ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180126172622 (127.0.0.1) 3.91ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: 191424f6-0d69-4b6c-8cde-b9befb38bdd2
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180126172622 (127.0.0.1) 4.00ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 191424f6-0d69-4b6c-8cde-b9befb38bdd2
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 191424f6-0d69-4b6c-8cde-b9befb38bdd2
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=569c82262602bb07f39931adfcc251b7e31b570c0a28b1e5
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=569c82262602bb07f39931adfcc251b7e31b570c0a28b1e5
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180130095436 (127.0.0.1) 10.78ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Kernel started: 900ce3fe-fd48-477b-a4a2-7a18f7186374
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 900ce3fe-fd48-477b-a4a2-7a18f7186374
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180130095436 (127.0.0.1) 4.66ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180130095436 (127.0.0.1) 6.98ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180130095436 (127.0.0.1) 3.69ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 900ce3fe-fd48-477b-a4a2-7a18f7186374
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8889/?token=4c3ec2bac2febb1421b26fce33c79d4182d050eb8866c94a
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=4c3ec2bac2febb1421b26fce33c79d4182d050eb8866c94a
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180130144213 (127.0.0.1) 10.91ms referer=http://localhost:8889/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180130144213 (127.0.0.1) 3.15ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180130144213 (127.0.0.1) 2.75ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: d62a4d77-0f62-4c25-931a-d1d18ab3076b
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180130144213 (127.0.0.1) 2.34ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d62a4d77-0f62-4c25-931a-d1d18ab3076b
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: d62a4d77-0f62-4c25-931a-d1d18ab3076b
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=90bb7713416ee9fb551bfe31a0f867e66681cd8bcdb7b911
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=90bb7713416ee9fb551bfe31a0f867e66681cd8bcdb7b911
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180131102408 (127.0.0.1) 20.24ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Kernel started: 3f9c8d2e-3460-4a64-bf70-e6e54786a4a1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 3f9c8d2e-3460-4a64-bf70-e6e54786a4a1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180131102408 (127.0.0.1) 4.56ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180131102408 (127.0.0.1) 7.00ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180131102408 (127.0.0.1) 3.88ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 3f9c8d2e-3460-4a64-bf70-e6e54786a4a1
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=bdcfe05374cc404d6b32a7460b33a5385907653d1067d68c
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=bdcfe05374cc404d6b32a7460b33a5385907653d1067d68c
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180213121353 (127.0.0.1) 37.21ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180213121353 (127.0.0.1) 2.29ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180213121353 (127.0.0.1) 2.18ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: e912ee08-9e85-49f9-bba0-b116702fdab1
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180213121353 (127.0.0.1) 2.27ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel e912ee08-9e85-49f9-bba0-b116702fdab1
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: e912ee08-9e85-49f9-bba0-b116702fdab1
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=db18e9ae3538d6040971577f48737de526b8dd0468ddd64b
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=db18e9ae3538d6040971577f48737de526b8dd0468ddd64b
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180213171126 (127.0.0.1) 13.91ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180213171126 (127.0.0.1) 2.79ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180213171126 (127.0.0.1) 2.62ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: fe86849d-05b4-4690-8df7-dc26479c4c81
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180213171126 (127.0.0.1) 2.03ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel fe86849d-05b4-4690-8df7-dc26479c4c81
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | WARNING] No such file or directory: merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /api/contents/merge_and_sort.ipynb?content=0&_=1518559913194 (127.0.0.1) 2.87ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Uploading file to /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: fe86849d-05b4-4690-8df7-dc26479c4c81
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=0dced3da11814712e675bcb2c755b74f92ecb441d1db3ad7
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=0dced3da11814712e675bcb2c755b74f92ecb441d1db3ad7
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180214125038 (127.0.0.1) 12.22ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180214125038 (127.0.0.1) 1.29ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180214125038 (127.0.0.1) 2.42ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: 24b6f919-bfe7-4f07-9e08-0d44206b9586
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180214125038 (127.0.0.1) 1.92ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 24b6f919-bfe7-4f07-9e08-0d44206b9586
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | INFO] Kernel shutdown: 24b6f919-bfe7-4f07-9e08-0d44206b9586
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8889/?token=c811a176aabde82a8e8d061075c7ca06f84d064f57080c14
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=c811a176aabde82a8e8d061075c7ca06f84d064f57080c14
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180306120925 (127.0.0.1) 18.10ms referer=http://localhost:8889/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180306120925 (127.0.0.1) 2.96ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180306120925 (127.0.0.1) 2.09ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel started: e2939369-2f6a-4ca8-9749-c3fb80933620
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306120925 (127.0.0.1) 3.43ms referer=http://localhost:8889/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel e2939369-2f6a-4ca8-9749-c3fb80933620
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | INFO] Kernel shutdown: e2939369-2f6a-4ca8-9749-c3fb80933620
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=ca8d19ba0603e70aba009c43603e67c7f1a4582cb4399c63
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=ca8d19ba0603e70aba009c43603e67c7f1a4582cb4399c63
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180306163021 (127.0.0.1) 12.53ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Kernel started: 5220af03-2f87-45e1-b5c2-4a1793b07346
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 5220af03-2f87-45e1-b5c2-4a1793b07346
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180306163021 (127.0.0.1) 4.57ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180306163021 (127.0.0.1) 2.88ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306163021 (127.0.0.1) 4.41ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 5220af03-2f87-45e1-b5c2-4a1793b07346
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/data/wave_cext_d_prot_sensor/test_join_sort
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=8ce0c2de007ee04e15b665c0e74814d9e28007353e37f341
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=8ce0c2de007ee04e15b665c0e74814d9e28007353e37f341
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180307131458 (127.0.0.1) 12.21ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Kernel started: 7a123a9f-98a4-4661-a662-390997ae3af5
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180307131458 (127.0.0.1) 2.28ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180307131458 (127.0.0.1) 2.19ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180307131458 (127.0.0.1) 3.98ms referer=http://localhost:8888/notebooks/merge_and_sort.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 7a123a9f-98a4-4661-a662-390997ae3af5
+[NotebookApp | INFO] Saving file at /merge_and_sort.ipynb
+[NotebookApp | INFO] Kernel shutdown: 7a123a9f-98a4-4661-a662-390997ae3af5
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
