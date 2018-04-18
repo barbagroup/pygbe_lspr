@@ -9,3 +9,7 @@ analysis_notebooks/figures/
 
 #pdf figures
 *.pdf
+
+#nbgrader log
+*.nbgrader.log
+
