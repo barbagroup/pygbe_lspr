@@ -1,4 +1,4 @@
-'''This file contains function that help to analyze and plot data related
+'''This file contains functions that help to analyze and plot data related
 to the convergence analysis.
 '''
 
