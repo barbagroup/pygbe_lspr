@@ -2,6 +2,9 @@
 and to report and plot the main findings.
 '''
 
+import numpy
+from matplotlib import pyplot, rcParams
+
 def plot_cext_wave_distance(wavelength, cext, linestyles, colors,
                              labels, file_name=None, file_ext=None):
     '''Plots the cross extinction section as a function of wavelength for
@@ -41,7 +44,7 @@ def plot_cext_wave_distance(wavelength, cext, linestyles, colors,
 
     pyplot.grid(ls=':', which='minor', alpha=0.6)
     pyplot.grid(ls=':', which='major', alpha=0.8)
-    pyplot.title('LSPR response to two BSA located at +/- 1nm z-axis')
+    pyplot.title('LSPR response to two BSA located at +/- 1nm z-axis \n')
     
     for i in range(len(wavelength)):
         pyplot.plot(wavelength[i], cext[i], linestyle=linestyles[i], 
@@ -55,7 +58,9 @@ def plot_cext_wave_distance(wavelength, cext, linestyles, colors,
                         bbox_inches='tight', pad_inches=0.1)
 
 def report(sensor_file, bsa_file, file_name=None, file_ext=None):
-    '''
+    '''Reports plot of Cext vs wavelength of sensor by itself and when BSA are
+       at a distance d of the sensor. 
+       It also reports the wavelength at wich the maximum accurs in both cases. 
     '''
     w_d1_00 , Cext_d1_00 = numpy.loadtxt(sensor_file, unpack = True)
     w_d1_2p_00 , Cext_d1_2p_00 = numpy.loadtxt(bsa_file, unpack = True)
@@ -74,5 +79,5 @@ def report(sensor_file, bsa_file, file_name=None, file_ext=None):
     for i in range(len(lst)):
         c, l = lst[i]
         idx = numpy.where(c==max(c))
-        print('Cext max at {} is {} and it occurs at a wavelength of {}'.format(l, 
-                max(c), w_d1_00[idx][0]))
+        print('Cext max at {} is {:.2f} and it occurs at a wavelength of {}'.format(l, 
+                max(c), w_d1_00[idx][0]/10))
