@@ -7,6 +7,9 @@
 #files/images in analysis notebooks 
 analysis_notebooks/figures/
 
+#ignore mesh files
+paper/BSA_silver_NP_LSPR_response/mesh_files/
+
 #pdf figures
 *.pdf
 
