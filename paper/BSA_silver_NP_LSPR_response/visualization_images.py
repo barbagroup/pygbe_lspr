@@ -48,14 +48,11 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
 
     ### Plot image ###
     
-    fig = pyplot.figure(figsize=(12,12))
+    fig = pyplot.figure(figsize=(10,10))
     ax = fig.gca(projection='3d')
 
     rcParams['font.family'] = 'serif'
     rcParams['font.size'] = 16
-    rcParams['xtick.top'] = True
-    rcParams['ytick.right'] = True
-    rcParams['axes.linewidth'] = 2
 
     ax.plot_trisurf(xs, ys, zs, triangles=face_sensor, linewidth=0.2,
                      edgecolor="black", color="white", alpha=0.3)
@@ -68,15 +65,75 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
     ax.set_ylabel('Y [$\AA$]')
     ax.set_zlabel('Z [$\AA$]')
 
-    ax.xaxis.labelpad=10
-    ax.yaxis.labelpad=10
-    ax.zaxis.labelpad=10
+    ax.xaxis.labelpad=20
+    ax.yaxis.labelpad=20
+    ax.zaxis.labelpad=20
+
+    arrayOfTicks = numpy.linspace(-200, 200, 11)
 
 
-    ax.view_init(elev, azim) 
-    fig.savefig(file_name+'.'+file_ext, bbox_inches='tight', pad_inches=0.1,
-                format=file_ext)
+    ax.w_xaxis.set_ticks(arrayOfTicks) 
+    ax.w_yaxis.set_ticks(arrayOfTicks) 
+    ax.w_zaxis.set_ticks(arrayOfTicks) 
+
+    ilim = arrayOfTicks.min()
+    slim = arrayOfTicks.max()
+
+    ax.set_xlim3d(ilim, slim)
+    ax.set_ylim3d(ilim, slim)
+    ax.set_zlim3d(ilim, slim)
+
+    ax.tick_params(pad=15)
+
+    if (azim==-90):
+        ax.w_yaxis.set_ticklabels([])
+
+    if (azim==-180):
+        ax.w_xaxis.set_ticklabels([])
 
 
+    ax.view_init(elev, azim)
+
+    if (file_name and file_ext):
+        fig.savefig(file_name+'.'+file_ext, bbox_inches='tight', pad_inches=0.1,
+                    format=file_ext)
+
+def main():
+    ''' Generates all the png images
+    '''
+    #Case of 2 proteins in z
+    sensor = 'mesh_files/sensor/sensor_32K_R8nm'
+    prt_1z = 'mesh_files/BSA_sensor_2pz_d=1_00/bsa_d1_R8+1nm_z'
+    prt_2z = 'mesh_files/BSA_sensor_2pz_d=1_00/bsa_d1_R8+1nm_-z'
+
+
+    read_data_plot(sensor, prt_1z, prt_2z, elev=0, azim=-90,
+                                        prot_color='red',
+                                        file_name='2prot_1nm_z_R8nm',
+                                        file_ext='png')
+    #Case of 2 proteins in x
+    prt_1x = 'mesh_files/BSA_sensor_2px_d=1_00/bsa_d1_R8+1nm_x'
+    prt_2x = 'mesh_files/BSA_sensor_2px_d=1_00/bsa_d1_R8+1nm_-x'
+
+
+    read_data_plot(sensor, prt_1x, prt_2x, elev=0, azim=-90,
+                                        prot_color='blue',
+                                        file_name='2prot_1nm_x_R8nm',
+                                        file_ext='png')
+    #Case of 2 proteins in y
+    prt_1y = 'mesh_files/BSA_sensor_2py_d=1_00/bsa_d1_R8+1nm_y'
+    prt_2y = 'mesh_files/BSA_sensor_2py_d=1_00/bsa_d1_R8+1nm_-y'
+
+
+    read_data_plot(sensor, prt_1y, prt_2y, elev=0, azim=-180,
+                                        prot_color='green',
+                                        file_name='2prot_1nm_y_R8nm',
+                                        file_ext='png')
+
+
+
+
+if __name__ == "__main__":
+    main()
 
 
