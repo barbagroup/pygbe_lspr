@@ -4,6 +4,8 @@ and to report and plot the main findings.
 
 import numpy
 from matplotlib import pyplot, rcParams
+import os
+
 
 def plot_cext_wave_distance(wavelength, cext, linestyles, colors,
                              labels, file_name=None, file_ext=None):
@@ -44,7 +46,7 @@ def plot_cext_wave_distance(wavelength, cext, linestyles, colors,
 
     pyplot.grid(ls=':', which='minor', alpha=0.6)
     pyplot.grid(ls=':', which='major', alpha=0.8)
-    pyplot.title('LSPR response to two BSA located at +/- 1nm z-axis \n')
+    pyplot.title('LSPR response \n')
     
     for i in range(len(wavelength)):
         pyplot.plot(wavelength[i], cext[i], linestyle=linestyles[i], 
@@ -81,3 +83,15 @@ def report(sensor_file, bsa_file, file_name=None, file_ext=None):
         idx = numpy.where(c==max(c))
         print('Cext max at {} is {:.2f} and it occurs at a wavelength of {}'.format(l, 
                 max(c), w_d1_00[idx][0]/10))
+
+def check_png(f_name):
+    ''' Checks if png image of extinction cross section exists
+    '''
+    if os.path.exists(f_name+'.png'):
+        file_ext = None
+        file_name = None
+    else:
+        file_ext='png'
+        file_name = f_name
+
+    return file_ext, file_name
