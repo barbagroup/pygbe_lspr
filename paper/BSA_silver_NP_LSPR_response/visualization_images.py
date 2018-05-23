@@ -5,6 +5,7 @@ locations respect to the sensor.
 import numpy
 from matplotlib import pyplot, rcParams
 from mpl_toolkits.mplot3d import Axes3D
+import os
 
 
 def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
@@ -51,8 +52,6 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
     fig = pyplot.figure(figsize=(10,10))
     ax = fig.gca(projection='3d')
 
-    rcParams['font.family'] = 'serif'
-    rcParams['font.size'] = 16
 
     ax.plot_trisurf(xs, ys, zs, triangles=face_sensor, linewidth=0.2,
                      edgecolor="black", color="white", alpha=0.3)
@@ -99,36 +98,57 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
                     format=file_ext)
 
 def main():
-    ''' Generates all the png images
+    ''' Generates all the png for sphere-BSA visualizations.
     '''
-    #Case of 2 proteins in z
-    sensor = 'mesh_files/sensor/sensor_32K_R8nm'
-    prt_1z = 'mesh_files/BSA_sensor_2pz_d=1_00/bsa_d1_R8+1nm_z'
-    prt_2z = 'mesh_files/BSA_sensor_2pz_d=1_00/bsa_d1_R8+1nm_-z'
+    files = ['2prot_1nm_z_R8nm.png', '2prot_1nm_x_R8nm.png', '2prot_1nm_y_R8nm.png']
+    status = list()
+    for file in files:
+        if os.path.exists(file):
+            status.append(True)
+        else:
+            status.append(False)
+
+    status = all(status)
+
+    if status == True:
+        print('Visualizations already exist! If you want to generate them '
+            'again, please delete the existing ones')
+
+    elif status == False: 
+        print('This can take couple of minutes, please wait while images '
+            'are produce')
+
+        rcParams['font.family'] = 'serif'
+        rcParams['font.size'] = 12
+
+        #Case of 2 proteins in z
+        sensor = 'mesh_files/sensor/sensor_32K_R8nm'
+        prt_1z = 'mesh_files/BSA_sensor_2pz_d=1_00/bsa_d1_R8+1nm_z'
+        prt_2z = 'mesh_files/BSA_sensor_2pz_d=1_00/bsa_d1_R8+1nm_-z'
 
 
-    read_data_plot(sensor, prt_1z, prt_2z, elev=0, azim=-90,
-                                        prot_color='red',
-                                        file_name='2prot_1nm_z_R8nm',
-                                        file_ext='png')
-    #Case of 2 proteins in x
-    prt_1x = 'mesh_files/BSA_sensor_2px_d=1_00/bsa_d1_R8+1nm_x'
-    prt_2x = 'mesh_files/BSA_sensor_2px_d=1_00/bsa_d1_R8+1nm_-x'
+        read_data_plot(sensor, prt_1z, prt_2z, elev=0, azim=-90,
+                                            prot_color='red',
+                                            file_name='2prot_1nm_z_R8nm',
+                                            file_ext='png')
+        #Case of 2 proteins in x
+        prt_1x = 'mesh_files/BSA_sensor_2px_d=1_00/bsa_d1_R8+1nm_x'
+        prt_2x = 'mesh_files/BSA_sensor_2px_d=1_00/bsa_d1_R8+1nm_-x'
 
 
-    read_data_plot(sensor, prt_1x, prt_2x, elev=0, azim=-90,
-                                        prot_color='blue',
-                                        file_name='2prot_1nm_x_R8nm',
-                                        file_ext='png')
-    #Case of 2 proteins in y
-    prt_1y = 'mesh_files/BSA_sensor_2py_d=1_00/bsa_d1_R8+1nm_y'
-    prt_2y = 'mesh_files/BSA_sensor_2py_d=1_00/bsa_d1_R8+1nm_-y'
+        read_data_plot(sensor, prt_1x, prt_2x, elev=0, azim=-90,
+                                            prot_color='blue',
+                                            file_name='2prot_1nm_x_R8nm',
+                                            file_ext='png')
+        #Case of 2 proteins in y
+        prt_1y = 'mesh_files/BSA_sensor_2py_d=1_00/bsa_d1_R8+1nm_y'
+        prt_2y = 'mesh_files/BSA_sensor_2py_d=1_00/bsa_d1_R8+1nm_-y'
 
 
-    read_data_plot(sensor, prt_1y, prt_2y, elev=0, azim=-180,
-                                        prot_color='green',
-                                        file_name='2prot_1nm_y_R8nm',
-                                        file_ext='png')
+        read_data_plot(sensor, prt_1y, prt_2y, elev=0, azim=-180,
+                                            prot_color='green',
+                                            file_name='2prot_1nm_y_R8nm',
+                                            file_ext='png')
 
 
 
