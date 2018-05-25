@@ -49,6 +49,8 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
 
     ### Plot image ###
     
+    pyplot.switch_backend('agg')         # We changed the backend to not generate the interactive image  
+    
     fig = pyplot.figure(figsize=(10,10))
     ax = fig.gca(projection='3d')
 
