@@ -55,12 +55,12 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
     ax = fig.gca(projection='3d')
 
 
-    ax.plot_trisurf(xs, ys, zs, triangles=face_sensor, linewidth=0.2,
+    ax.plot_trisurf(xs, ys, zs, triangles=face_sensor, linewidth=0.1,
                      edgecolor="black", color="white", alpha=0.3)
-    ax.plot_trisurf(xp1, yp1, zp1, triangles=face_protein_1, linewidth=0.2,
-                     edgecolor=prot_color, color="white", alpha=0.1 )
-    ax.plot_trisurf(xp2, yp2, zp2, triangles=face_protein_2, linewidth=0.2,
-                     edgecolor=prot_color, color="white", alpha=0.1 )
+    ax.plot_trisurf(xp1, yp1, zp1, triangles=face_protein_1, linewidth=0.1,
+                     edgecolor=prot_color, color="white", alpha=0.2 )
+    ax.plot_trisurf(xp2, yp2, zp2, triangles=face_protein_2, linewidth=0.1,
+                     edgecolor=prot_color, color="white", alpha=0.2 )
 
     ax.set_xlabel('X [$\AA$]')
     ax.set_ylabel('Y [$\AA$]')
