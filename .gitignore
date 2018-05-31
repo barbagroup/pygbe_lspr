@@ -7,8 +7,8 @@
 #files/images in analysis notebooks 
 analysis_notebooks/figures/
 
-#ignore mesh files
-paper/BSA_silver_NP_LSPR_response/mesh_files/
+#ignore plot images
+paper/BSA_silver_NP_LSPR_response/*.png 
 
 #pdf figures
 *.pdf
