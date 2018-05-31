@@ -96,7 +96,8 @@ def read_data_plot(sensor, prt_one, prt_two, elev, azim, prot_color,
     ax.view_init(elev, azim)
 
     if (file_name and file_ext):
-        fig.savefig(file_name+'.'+file_ext, bbox_inches='tight', pad_inches=0.1,
+        fig.savefig('figures/'+file_name+'.'+file_ext, bbox_inches='tight', 
+                    pad_inches=-0.5,
                     format=file_ext)
 
 def main():
@@ -105,7 +106,7 @@ def main():
     files = ['2prot_1nm_z_R8nm.png', '2prot_1nm_x_R8nm.png', '2prot_1nm_y_R8nm.png']
     status = list()
     for file in files:
-        if os.path.exists(file):
+        if os.path.exists('figures/'+file):
             status.append(True)
         else:
             status.append(False)
@@ -114,11 +115,11 @@ def main():
 
     if status == True:
         print('Visualizations already exist! If you want to generate them '
-            'again, please delete the existing ones')
+            'again, please delete the existing ones.')
 
     elif status == False: 
         print('This can take couple of minutes, please wait while images '
-            'are produce')
+            'are produce.')
 
         rcParams['font.family'] = 'serif'
         rcParams['font.size'] = 12
