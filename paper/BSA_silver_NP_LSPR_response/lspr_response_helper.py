@@ -91,7 +91,7 @@ def check_png(f_name):
         file_ext = None
         file_name = None
         print('Plot already exists! If you want to generate it '
-            'again, please delete the existing one')
+            'again, please delete the existing one.')
     else:
         file_ext='png'
         file_name = f_name
