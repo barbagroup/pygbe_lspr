@@ -74,19 +74,31 @@ def perc_error(Cext, rich_ext):
     
     return rel_err, perc_err
 
-def plot_sph_complex_convergence(N, error, file_name=None, file_ext=None):
-    pyplot.figure(figsize=(8,5))
+def plot_sph_complex_convergence(N, error, file_name=None, file_ext=None, paper=False):
+
+    if paper:
+        file_ext = 'pdf'
+        pyplot.switch_backend('agg')
+        fig = pyplot.figure(figsize=(3, 2))
+        ms = 5
+        lw = 1
+        fs = 10
+    else:
+        pyplot.figure(figsize=(6, 4))
+        ms = 10
+        lw = 2
+        fs = 12
 
     rcParams['font.family'] = 'serif'
-    rcParams['font.size'] = 14
+    rcParams['font.size'] = 12
     rcParams['xtick.top'] = True
     rcParams['ytick.right'] = True
-    rcParams['axes.linewidth'] = 2
+    rcParams['axes.linewidth'] = 1
 
     asymp = N[-3]*error[-3]/N
 
-    pyplot.loglog(N, error, ls='',marker='o', c='k', mew=1.5, mfc='w', ms=10, label='BSA_sensor')
-    pyplot.loglog(N, asymp, c='k', marker='None', ls=':', lw=2, label=None)
+    pyplot.loglog(N, error, ls='',marker='o', c='k', mew=1, mfc='w', ms=ms, label='BSA_sensor')
+    pyplot.loglog(N, asymp, c='k', marker='None', ls=':', lw=lw, label=None)
 
 
     loc = (3*N[-2]+N[-1])/4
@@ -94,20 +106,20 @@ def plot_sph_complex_convergence(N, error, file_name=None, file_ext=None):
     tex_loc = numpy.array((loc,N[-3]*error[-3]/loc))
 
     
-    pyplot.text(tex_loc[0], tex_loc[1],'N$^{-1}$', fontsize=12,
+    pyplot.text(tex_loc[0], tex_loc[1],'N$^{-1}$', fontsize=fs,
                 rotation=-35,rotation_mode='anchor')
     
     pyplot.xlabel('N')
     pyplot.ylabel('Relative error')
-    pyplot.tick_params(axis='both', length=10, width=1, which='major', direction='in')
-    pyplot.tick_params(axis='both', length=5, width=1, which='minor', direction='in')
+    pyplot.tick_params(axis='both', length=10, width=0.8, which='major', direction='in')
+    pyplot.tick_params(axis='both', length=5, width=0.8, which='minor', direction='in')
     pyplot.ylim(1e-3,1)
     pyplot.xlim(1e2,1e5)
-    pyplot.legend(loc='best')
+    pyplot.legend(loc='upper right', fontsize=fs, numpoints=1, handlelength=0.1).get_frame().set_lw(0.3)
     pyplot.grid(True, which="both")
     
     if (file_name and file_ext):
         pyplot.savefig(file_name+'.'+file_ext, format=file_ext, dpi=80, bbox_inches='tight', pad_inches=0.1)
 
-
-
+    if paper :
+        pyplot.close(fig)
