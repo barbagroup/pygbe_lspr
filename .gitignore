@@ -9,6 +9,7 @@ analysis_notebooks/figures/
 
 #ignore plot images
 paper/BSA_silver_NP_LSPR_response/*.png 
+paper/BSA_silver_NP_LSPR_response/mesh_files/
 
 #pdf figures
 *.pdf
