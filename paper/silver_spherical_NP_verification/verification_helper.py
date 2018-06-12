@@ -51,7 +51,7 @@ def plot_cext_wave(lamb, cext, cext_an, ylim_s, ylim_e, xpoints, title=None,
         fsl = 12
 
     rcParams['font.family'] = 'serif'
-    rcParams['font.size'] = 12
+    rcParams['font.size'] = fs
     rcParams['xtick.top'] = True
     rcParams['ytick.right'] = True
     rcParams['axes.linewidth'] = 1
@@ -80,7 +80,7 @@ def plot_cext_wave(lamb, cext, cext_an, ylim_s, ylim_e, xpoints, title=None,
 
     if file_name and file_ext:
         pyplot.savefig(file_name+'.'+file_ext, format=file_ext, dpi=80, 
-                        bbox_inches='tight', pad_inches=0.1)
+                        bbox_inches='tight', pad_inches=0.04)
     if paper :
         pyplot.close(fig)
 
