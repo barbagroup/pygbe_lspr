@@ -90,7 +90,7 @@ def plot_sph_complex_convergence(N, error, file_name=None, file_ext=None, paper=
         fs = 12
 
     rcParams['font.family'] = 'serif'
-    rcParams['font.size'] = 12
+    rcParams['font.size'] = fs
     rcParams['xtick.top'] = True
     rcParams['ytick.right'] = True
     rcParams['axes.linewidth'] = 1
@@ -119,7 +119,8 @@ def plot_sph_complex_convergence(N, error, file_name=None, file_ext=None, paper=
     pyplot.grid(True, which="both")
     
     if (file_name and file_ext):
-        pyplot.savefig(file_name+'.'+file_ext, format=file_ext, dpi=80, bbox_inches='tight', pad_inches=0.1)
+        #fig.subplots_adjust(left=0.235, bottom=0.25, right=0.965, top=0.95)
+        fig.savefig(file_name+'.'+file_ext, format=file_ext, dpi=80, bbox_inches='tight', pad_inches=0.04)
 
     if paper :
         pyplot.close(fig)
