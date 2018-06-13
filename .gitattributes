@@ -1,2 +1,2 @@
-*.txt linguist-vendored
+data/* linguist-vendored
 
