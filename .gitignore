@@ -17,3 +17,4 @@ paper/BSA_silver_NP_LSPR_response/mesh_files/
 #nbgrader log
 *.nbgrader.log
 
+.DS_Store
